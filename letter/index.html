@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ввод буквы</title>
+<script>
+  function checkLetter() {
+    var letter = document.getElementById("letterInput").value.toUpperCase();
+
+    if (letter === "A") {
+      alert("Вы ввели букву A");
+    } else if (letter === "B") {
+      alert("Вы ввели букву B");
+    } else if (letter === "C") {
+      alert("Вы ввели букву C");
+    } else {
+      alert("Вы ввели другую букву");
+    }
+  }
+</script>
+</head>
+<body>
+
+<form>
+  <label for="letterInput">Введите букву: </label>
+  <input type="text" id="letterInput" maxlength="1">
+  <button type="button" onclick="checkLetter()">Проверить</button>
+</form>
+
+</body>
+</html>

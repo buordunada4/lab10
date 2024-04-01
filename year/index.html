@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Проверка високосного года</title>
+<script>
+  function checkLeapYear() {
+    var year = document.getElementById("yearInput").value;
+    var outputText = document.getElementById("outputText");
+
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+      outputText.innerText = year + " год является високосным.";
+    } else {
+      outputText.innerText = year + " год не является високосным.";
+    }
+  }
+</script>
+</head>
+<body>
+
+<form>
+  <label for="yearInput">Введите год: </label>
+  <input type="number" id="yearInput">
+  <button type="button" onclick="checkLeapYear()">Определить</button>
+</form>
+
+<p id="outputText">Здесь будет отображаться информация о високосном годе.</p>
+
+</body>
+</html>
